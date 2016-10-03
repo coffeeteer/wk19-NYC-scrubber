@@ -28,27 +28,58 @@ class Form extends React.Component{
 
 		return(
 
-			<div className="panel panel-default">
-				<div className="panel-heading">
-					<h3 className="panel-title text-center">Query</h3>
-				</div>
-				<div className="panel-body text-center">
+		<form class="form-horizontal">
+			<fieldset>
 
-						<form>
-							<div className="form-group">
-								<h4 className=""><strong>Location</strong></h4>
 
-								{/*Note how each of the form elements has an id that matches the state. This is not necessary but it is convenient.
-									Also note how each has an onChange event associated with our handleChange event. 
-								*/}
-								<input type="text" className="form-control text-center" id="term" onChange= {this.handleChange} required/>
-								<br />
-								<button type="button" className="btn btn-primary" onClick={this.handleClick}>Submit</button>
-							</div>
 
-						</form>
-				</div>
+			  <legend>
+			    <div class="col-md-12 col-md-offset-6">
+			      Search
+			    </div>  
+			  </legend>  
+			 
+
+
+
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="topic">Topic</label>  
+			  <div class="col-md-6">
+			  <input name="topic" class="form-control input-md" id="term" onChange= {this.handleChange} required />
+			    
+			  </div>
 			</div>
+
+
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="start-year">Start Year</label>
+			  <div class="col-md-6">
+			    <input name="start-year" class="form-control input-md" id="start-year"  onChange= {this.handleChange} required />
+			    
+			  </div>
+			</div>
+
+
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="end-year">End Year</label>
+			  <div class="col-md-6">
+			    <input name="end-year" class="form-control input-md"  onChange= {this.handleChange} required />
+			    
+			  </div>
+			</div>
+
+
+			<div class="form-group">
+			  <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+			  <div class="col-md-4">
+									<button type="button" className="btn btn-primary" onClick={this.handleClick}>Submit</button>
+			    <button name="singlebutton"  type="button" class="btn btn-primary" id="singlebutton">Submit</button>
+			  </div>
+			</div>
+
+			</fieldset>
+		</form>
+
 
 		)
 	}

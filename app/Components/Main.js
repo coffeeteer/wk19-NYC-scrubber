@@ -52,14 +52,16 @@ class Main extends React.Component{
 
 	render(){
 		return(
-
+			
 			<div className="container">
 
 				<div className="row">
 
-					<div className="jumbotron">
-						<h2 className="text-center">Address Finder!</h2>
-						<p className="text-center"><em>Enter a landmark to search for its exact address (ex: "Eiffel Tower").</em></p>
+					<div class="container">
+					  <div class="jumbotron">
+					    <h1>New York Times Article Scrubber</h1> 
+					    <p>Search for and annotate articles of interest!</p> 
+					  </div>
 					</div>
 
 					<div className="col-md-6">
